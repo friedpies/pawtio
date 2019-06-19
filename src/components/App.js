@@ -29,8 +29,12 @@ class App extends Component {
     // console.log("DOTENV", process.env.DB_NAME);
   }
 
-  queryDatabase(params) {
-    Axios.get(`${process.env.REACT_APP_API_URL}/api/test`).then(response => {
+  queryDatabase(endpoint, params) {
+    const queryParams = { params: params };
+    Axios.get(
+      `${process.env.REACT_APP_API_URL}/api/${endpoint}`,
+      queryParams
+    ).then(response => {
       console.log(response.data);
     });
   }
@@ -38,7 +42,9 @@ class App extends Component {
   render() {
     return (
       <BrowserRouter>
-        {this.state.isValidLocation ? <Redirect to="/place" /> : null}
+        {this.state.isValidLocation ? (
+          <Redirect to={`/place/${this.state.city}`} />
+        ) : null}
         <div className="App">
           <Route
             exact
