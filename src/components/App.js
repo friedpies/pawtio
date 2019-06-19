@@ -15,7 +15,6 @@ class App extends Component {
         <div className="App">
           <Route exact path="/" component={Launch} />
           <Route path="/place" component={Place} />
-          <header className="App-header" />
         </div>
       </BrowserRouter>
     );
