@@ -31,7 +31,7 @@ class App extends Component {
   queryDatabase(endpoint, params) {
     const queryParams = { params: params };
     Axios.get(
-      `${process.env.REACT_APP_API_URL}/api/${endpoint}`,
+      `${process.env.REACT_APP_API_URL}/${endpoint}`,
       queryParams
     ).then(response => {
       console.log(response.data);

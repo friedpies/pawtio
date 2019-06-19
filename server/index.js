@@ -16,8 +16,8 @@ app.get("/api/:endpoint", (req, res) => {
   res.send({ endpoint, params: params });
 });
 
-app.get("/api/photos", (req, res) => {
-  
+app.get("/api/bgphotos/:city", (req, res) => {
+  res.send(req.params.city);
 });
 
 app.listen(port, () => {

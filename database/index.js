@@ -1,7 +1,6 @@
 require("dotenv").config();
 const mongoose = require("mongoose");
-
-// console.log("THIS IS FROM SERVER", process.env.PORT);
+const { Place, User, City } = require("./models");
 
 mongoose.connect(
   `mongodb+srv://admin:${
@@ -20,52 +19,9 @@ db.once("open", () => {
   console.log(`CONNECTED to ${process.env.DB_NAME} database`);
 });
 
-let placeSchema = mongoose.Schema({
-  name: String,
-  address: {
-    lineOne: String,
-    lineTwo: String,
-    city: String,
-    state: String,
-    zip: Number,
-    latLong: [Number, Number]
-  },
-  phone: String,
-  website: String,
-  opening_hours: {},
-  images: [],
-  userInput: [{}]
+Place.findById("5d0a6a423707fe6fe13fa9cd").then(result => {
+  // console.log("Finding Place after Importing Modules", result);
 });
-
-let userSchema = mongoose.Schema({
-  firstName: String,
-  lastName: String,
-  email: String,
-  address: {
-    lineOne: String,
-    lineTwo: String,
-    city: String,
-    state: String,
-    zip: Number,
-    latLong: [Number, Number]
-  },
-  reviews: [{}]
-});
-
-let citySchema = mongoose.Schema({
-  cityName: String,
-  state: String,
-  stateAbbrv: String,
-  backgroundImages: [String]
-});
-
-const Place = mongoose.model("Place", placeSchema, "places");
-const User = mongoose.model("User", userSchema, "users");
-const City = mongoose.model("User", citySchema, "cities");
-
-// Place.findById("5d0a6a423707fe6fe13fa9cd").then(result => {
-//   console.log(result);
-// });
 
 // Place.updateOne(
 //   { _id: "5d0a6a423707fe6fe13fa9cd" },
