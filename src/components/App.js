@@ -36,7 +36,6 @@ class App extends Component {
             path="/"
             render={() => (
               <Launch
-                location={this.state.location}
                 onTextChange={this.onTextChange}
                 onSearch={this.onSearch}
               />
