@@ -1,9 +1,14 @@
 import React from "react";
-import Layout from "./Layout";
+import Navigation from "./Navigation";
 
 const Place = ({ city }) => (
   <>
-    <Layout />
+    <Navigation />
+    <div className="container">
+      <div className="row">
+        <h1 className="display-4">{city}</h1>
+      </div>
+    </div>
   </>
 );
 
