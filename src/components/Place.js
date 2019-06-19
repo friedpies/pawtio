@@ -1,5 +1,5 @@
 import React from "react";
 
-const Place = () => <div>Place</div>;
+const Place = ({ city }) => <div>{city}</div>;
 
 export default Place;
