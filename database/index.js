@@ -63,9 +63,6 @@ const Place = mongoose.model("Place", placeSchema, "places");
 const User = mongoose.model("User", userSchema, "users");
 const City = mongoose.model("User", citySchema, "cities");
 
-// Place.findById("5d0a6a423707fe6fe13fa9cd").then(result => {
-//   console.log(result);
-// });
 
 // Place.updateOne(
 //   { _id: "5d0a6a423707fe6fe13fa9cd" },
