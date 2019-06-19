@@ -16,6 +16,10 @@ app.get("/api/:endpoint", (req, res) => {
   res.send({ endpoint, params: params });
 });
 
+app.get("/api/photos", (req, res) => {
+  
+});
+
 app.listen(port, () => {
   console.log("Server is listening on port: ", port);
 });

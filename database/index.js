@@ -38,7 +38,6 @@ let placeSchema = mongoose.Schema({
 });
 
 let userSchema = mongoose.Schema({
-  _id: mongoose.Schema.Types.ObjectId,
   firstName: String,
   lastName: String,
   email: String,
@@ -53,8 +52,16 @@ let userSchema = mongoose.Schema({
   reviews: [{}]
 });
 
+let citySchema = mongoose.Schema({
+  cityName: String,
+  state: String,
+  stateAbbrv: String,
+  backgroundImages: [String]
+});
+
 const Place = mongoose.model("Place", placeSchema, "places");
-const User = mongoose.model("user", userSchema);
+const User = mongoose.model("User", userSchema, "users");
+const City = mongoose.model("User", citySchema, "cities");
 
 // Place.findById("5d0a6a423707fe6fe13fa9cd").then(result => {
 //   console.log(result);
