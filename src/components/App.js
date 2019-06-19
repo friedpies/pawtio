@@ -23,10 +23,9 @@ class App extends Component {
     this.setState({ city: event.target.value });
   }
 
-  onSearch(event) {
-    this.setState({ isValidLocation: true });
-    this.queryDatabase();
-    // console.log("DOTENV", process.env.DB_NAME);
+  onSearch(endpoint, params) {
+    this.setState({ isValidLocation: true }); // enables router forwarding
+    this.queryDatabase(endpoint, params);
   }
 
   queryDatabase(endpoint, params) {
@@ -53,6 +52,7 @@ class App extends Component {
               <Launch
                 onTextChange={this.onTextChange}
                 onSearch={this.onSearch}
+                city={this.state.city}
               />
             )}
           />

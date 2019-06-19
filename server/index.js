@@ -9,8 +9,11 @@ const cors = require("cors");
 app.use(cors());
 app.use(express.static(path.join(__dirname, "../build")));
 
-app.get("/api/test", (req, res) => {
-  res.send("TEST ROUTE WORKING");
+app.get("/api/:endpoint", (req, res) => {
+  const endpoint = req.params.endpoint;
+  const params = req.query;
+  console.log(endpoint, params);
+  res.send({ endpoint, params: params });
 });
 
 app.listen(port, () => {

@@ -5,9 +5,16 @@ import "../styles/Launch.scss";
 const Launch = ({ onTextChange, onSearch, city }) => (
   <div className="jumbotron">
     <div className="container">
-      <h1 className="display-1" id="main-header">pawtio</h1>
+      <h1 className="display-1" id="main-header">
+        pawtio
+      </h1>
       <h3>Enter a City</h3>
-      <LocationSearch onTextChange={onTextChange} onSearch={onSearch} />
+      <LocationSearch
+        onTextChange={onTextChange}
+        onSearch={() => {
+          onSearch("location", { city: city });
+        }}
+      />
     </div>
   </div>
 );
