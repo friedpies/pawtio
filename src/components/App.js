@@ -9,9 +9,9 @@ import "../styles/App.scss";
 class App extends Component {
   constructor(props) {
     super(props);
-    console.log(process.env.REACT_APP_API_URL);
+    // console.log(process.env.REACT_APP_API_URL);
     this.state = {
-      city: "Austin",
+      city: "",
       isValidLocation: false
     };
 
@@ -20,30 +20,17 @@ class App extends Component {
   }
 
   onTextChange(event) {
-    this.setState({ city: event.target.value });
+    this.setState({ city: event.target.value.toLowerCase() });
   }
 
   onSearch(endpoint, params) {
     this.setState({ isValidLocation: true }); // enables router forwarding
-    this.queryDatabase(endpoint, params);
-  }
-
-  queryDatabase(endpoint, params) {
-    const queryParams = { params: params };
-    Axios.get(
-      `${process.env.REACT_APP_API_URL}/api/${endpoint}`,
-      queryParams
-    ).then(response => {
-      console.log(response.data);
-    });
   }
 
   render() {
     return (
       <BrowserRouter>
-        {this.state.isValidLocation ? (
-          <Redirect to={`/place/${this.state.city}`} />
-        ) : null}
+        {this.state.isValidLocation ? <Redirect to={`/place`} /> : null}
         <div className="App">
           <Route
             exact

@@ -1,8 +1,6 @@
 require("dotenv").config();
 const mongoose = require("mongoose");
 
-// console.log("THIS IS FROM SERVER", process.env.PORT);
-
 mongoose.connect(
   `mongodb+srv://admin:${
     process.env.DB_PW
@@ -19,50 +17,6 @@ db.on("error", console.error.bind(console, "connection error:"));
 db.once("open", () => {
   console.log(`CONNECTED to ${process.env.DB_NAME} database`);
 });
-
-let placeSchema = mongoose.Schema({
-  name: String,
-  address: {
-    lineOne: String,
-    lineTwo: String,
-    city: String,
-    state: String,
-    zip: Number,
-    latLong: [Number, Number]
-  },
-  phone: String,
-  website: String,
-  opening_hours: {},
-  images: [],
-  userInput: [{}]
-});
-
-let userSchema = mongoose.Schema({
-  firstName: String,
-  lastName: String,
-  email: String,
-  address: {
-    lineOne: String,
-    lineTwo: String,
-    city: String,
-    state: String,
-    zip: Number,
-    latLong: [Number, Number]
-  },
-  reviews: [{}]
-});
-
-let citySchema = mongoose.Schema({
-  cityName: String,
-  state: String,
-  stateAbbrv: String,
-  backgroundImages: [String]
-});
-
-const Place = mongoose.model("Place", placeSchema, "places");
-const User = mongoose.model("User", userSchema, "users");
-const City = mongoose.model("User", citySchema, "cities");
-
 
 // Place.updateOne(
 //   { _id: "5d0a6a423707fe6fe13fa9cd" },
@@ -158,4 +112,4 @@ const City = mongoose.model("User", citySchema, "cities");
 //   console.log("Ran insert", result);
 // });
 
-module.exports = { db };
+// module.exports = { db };
