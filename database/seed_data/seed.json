@@ -1,0 +1,67 @@
+[{
+    "address": {
+      "lineOne": "6700 Burnet Rd",
+      "lineTwo": "",
+      "city": "Austin",
+      "state": "Texas",
+      "zip": 78757
+    },
+    "images": ["https://static.spacecrafted.com/ff2ef4b0dd0e4d61b1cb4fcc64f6793d/i/e33d908302d545519da0891ffc8097ff/1/GCuCv726gZycFxatRCb7iU/YardBar-176.jpg"],
+    "name": "Yard Bar",
+    "phone": "(512) 900-3773",
+    "website": "https://yardbar.com/",
+    "filters": {
+      "indoors": false,
+      "outdoors": true,
+      "fenced": true,
+      "off-leash allowed": true,
+      "covered patio": false,
+      "food available": true,
+      "drinks": true
+    }
+  },
+  {
+    "address": {
+      "lineOne": "121 Pickle Rd",
+      "lineTwo": "",
+      "city": "Austin",
+      "state": "Texas",
+      "zip": 78704
+    },
+    "images": ["https://dailycoffeenews.com/wp-content/uploads/2018/01/cosmic-coffee-beer.jpg"],
+    "name": "Cosmic",
+    "phone": "(512) 481-0694",
+    "website": "https://www.cosmiccoffeebeer.com/",
+    "filters": {
+      "indoors": true,
+      "outdoors": true,
+      "fenced": true,
+      "off-leash allowed": false,
+      "covered patio": false,
+      "food available": true,
+      "drinks": true
+    }
+  },
+  {
+    "address": {
+      "lineOne": "702 Shady Ln",
+      "lineTwo": "",
+      "city": "Austin",
+      "state": "Texas",
+      "zip": 78702
+    },
+    "images": ["https://static1.squarespace.com/static/54b80a43e4b060f2e9746ed7/t/58e278bd197aea8ba609ee1c/1491237054395/17635573_278827699210177_3984567696746113056_o.jpg?format=1500w"],
+    "name": "The Infinite Monkey Theorem",
+    "phone": "(512) 956-7757",
+    "website": "https://theinfinitemonkeytheorem.com/",
+    "filters": {
+      "indoors": true,
+      "outdoors": false,
+      "fenced": true,
+      "off-leash allowed": false,
+      "covered patio": false,
+      "food available": false,
+      "drinks": true
+    }
+  }
+]
