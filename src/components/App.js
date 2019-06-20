@@ -2,8 +2,20 @@ import React, { Component } from "react";
 import { BrowserRouter, Route, Redirect } from "react-router-dom";
 import Launch from "./Launch";
 import Results from "./Results";
+import Axios from "axios";
 
 import "../styles/App.scss";
+
+const searchForResults = filters => {
+  console.log();
+  const queryParams = {};
+  filters.forEach(filter => {
+    queryParams[filter[0]] = filter[1];
+  });
+  return Axios.get(`${process.env.REACT_APP_API_URL}/places`, {
+    params: queryParams
+  });
+};
 
 class App extends Component {
   constructor(props) {
@@ -19,27 +31,32 @@ class App extends Component {
         ["covered patio", false],
         ["food available", false],
         ["drinks", false]
-      ]
+      ],
+      searchResults: []
     };
 
     this.onSearch = this.onSearch.bind(this);
     this.onCheck = this.onCheck.bind(this);
   }
 
-  onCheck(event) {
-    const checkboxId = event.target.id;
+  onCheck({ target }) {
+    const checkboxId = target.id;
     const index = parseInt(checkboxId.slice(9, checkboxId.length));
     const updatedCheckboxes = this.state.filters.slice();
-    updatedCheckboxes[index] = [
-      updatedCheckboxes[index][0],
-      event.target.checked
-    ];
+    updatedCheckboxes[index] = [updatedCheckboxes[index][0], target.checked];
     this.setState({
       filters: updatedCheckboxes
     });
   }
 
-  onSearch(event) {
+  onSearch() {
+    searchForResults(this.state.filters)
+      .then(({ data }) => {
+        console.log("SEARCH RESULTS ", data);
+      })
+      .catch(err => {
+        console.log(err);
+      });
     this.setState({ didSearch: true }); // enables router forwarding
   }
 
@@ -59,7 +76,16 @@ class App extends Component {
               />
             )}
           />
-          <Route path="/results" render={() => <Results />} />
+          <Route
+            path="/results"
+            render={() => (
+              <Results
+                onSearch={this.onSearch}
+                onCheck={this.onCheck}
+                filters={this.state.filters}
+              />
+            )}
+          />
         </div>
       </BrowserRouter>
     );

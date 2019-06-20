@@ -12,9 +12,10 @@ let placeSchema = mongoose.Schema({
   },
   phone: String,
   website: String,
-  opening_hours: {},
+  filters: {},
   images: [],
-  userInput: [{}]
+  userInput: [{}],
+  openingHours: {}
 });
 
 const Place = mongoose.model("Place", placeSchema, "places");
