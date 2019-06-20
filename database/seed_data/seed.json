@@ -1,5 +1,4 @@
-[
-  {
+[{
     "address": {
       "lineOne": "6700 Burnet Rd",
       "lineTwo": "",
@@ -81,6 +80,72 @@
       "indoors": "false",
       "outdoors": "true",
       "fenced": "false",
+      "off-leash allowed": "false",
+      "covered patio": "true",
+      "food available": "true",
+      "drinks": "true"
+    }
+  },
+  {
+    "address": {
+      "lineOne": "6014 Techni Center Dr",
+      "lineTwo": "Ste 2-101",
+      "city": "Austin",
+      "state": "Texas",
+      "zip": 78721
+    },
+    "images": ["https://static1.squarespace.com/static/533a1e9de4b0bea8053bdc89/5955be04b6ac5085f488cd54/5a0fae6fc8302511610fc8fb/1510977137400/23632842_360801581013063_7500284639923018987_o.jpg?format=2500w"],
+    "name": "Southern Heights Brewing Company",
+    "phone": "(512) 358-4350",
+    "website": "http://www.southernheightsbrewing.com/",
+    "filters": {
+      "indoors": "true",
+      "outdoors": "false",
+      "fenced": "false",
+      "off-leash allowed": "false",
+      "covered patio": "false",
+      "food available": "true",
+      "drinks": "true"
+    }
+  },
+  {
+    "address": {
+      "lineOne": "601 W 6th St",
+      "lineTwo": "",
+      "city": "Austin",
+      "state": "Texas",
+      "zip": 78701
+    },
+    "images": ["http://parloryard.com/wp-content/uploads/2013/01/PANA4574.jpg"],
+    "name": "Parlor and Yard",
+    "phone": "(512) 524-0466",
+    "website": "http://parloryard.com/",
+    "filters": {
+      "indoors": "true",
+      "outdoors": "true",
+      "fenced": "true",
+      "off-leash allowed": "false",
+      "covered patio": "true",
+      "food available": "true",
+      "drinks": "true"
+    }
+  },
+  {
+    "address": {
+      "lineOne": "2307 Manor Rd",
+      "lineTwo": "",
+      "city": "Austin",
+      "state": "Texas",
+      "zip": 78722
+    },
+    "images": ["https://www.totalhappyhour.com/preview/500-450/content/files/mod.happyhour/aef60d80a7764dc4a1dabd440ded9db5.jpg"],
+    "name": "The Butterfly Bar",
+    "phone": "(512) 478-5282",
+    "website": "butterflybaraustin.com",
+    "filters": {
+      "indoors": "false",
+      "outdoors": "true",
+      "fenced": "true",
       "off-leash allowed": "false",
       "covered patio": "true",
       "food available": "true",
