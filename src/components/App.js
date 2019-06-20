@@ -1,8 +1,7 @@
 import React, { Component } from "react";
 import { BrowserRouter, Route, Redirect } from "react-router-dom";
 import Launch from "./Launch";
-import Place from "./Place";
-import Axios from "axios";
+import Results from "./Results";
 
 import "../styles/App.scss";
 
@@ -11,42 +10,56 @@ class App extends Component {
     super(props);
     // console.log(process.env.REACT_APP_API_URL);
     this.state = {
-      city: "",
-      isValidLocation: false
+      didSearch: false,
+      filters: [
+        ["indoors", false],
+        ["outdoors", false],
+        ["fenced", false],
+        ["off-leash allowed", false],
+        ["covered patio", false],
+        ["food available", false],
+        ["drinks", false]
+      ]
     };
 
-    this.onTextChange = this.onTextChange.bind(this);
     this.onSearch = this.onSearch.bind(this);
+    this.onCheck = this.onCheck.bind(this);
   }
 
-  onTextChange(event) {
-    this.setState({ city: event.target.value.toLowerCase() });
+  onCheck(event) {
+    const checkboxId = event.target.id;
+    const index = parseInt(checkboxId.slice(9, checkboxId.length));
+    const updatedCheckboxes = this.state.filters.slice();
+    updatedCheckboxes[index] = [
+      updatedCheckboxes[index][0],
+      event.target.checked
+    ];
+    this.setState({
+      filters: updatedCheckboxes
+    });
   }
 
-  onSearch(endpoint, params) {
-    this.setState({ isValidLocation: true }); // enables router forwarding
+  onSearch(event) {
+    this.setState({ didSearch: true }); // enables router forwarding
   }
 
   render() {
     return (
       <BrowserRouter>
-        {this.state.isValidLocation ? <Redirect to={`/place`} /> : null}
+        {this.state.didSearch ? <Redirect to={`/results`} /> : null}
         <div className="App">
           <Route
             exact
             path="/"
             render={() => (
               <Launch
-                onTextChange={this.onTextChange}
                 onSearch={this.onSearch}
-                city={this.state.city}
+                onCheck={this.onCheck}
+                filters={this.state.filters}
               />
             )}
           />
-          <Route
-            path="/place"
-            render={() => <Place city={this.state.city} />}
-          />
+          <Route path="/results" render={() => <Results />} />
         </div>
       </BrowserRouter>
     );
