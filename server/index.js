@@ -9,19 +9,19 @@ const { Place } = require("../database/models");
 const cors = require("cors");
 
 app.use(cors());
-app.use(express.static(path.join(__dirname, "../build")));
+// app.use(express.static(path.join(__dirname, "../build")));
 
-app.get("/api/places", (req, res) => {
-  const filterParams = req.query;
-  const filterObj = {};
-  for (let filter in filterParams) {
-    filterObj[`filters.${filter}`] = filterParams[filter];
-  }
+// app.get("/api/places", (req, res) => {
+//   const filterParams = req.query;
+//   const filterObj = {};
+//   for (let filter in filterParams) {
+//     filterObj[`filters.${filter}`] = filterParams[filter];
+//   }
 
-  Place.find(filterObj).then(results => {
-    res.json(results);
-  });
-});
+//   Place.find(filterObj).then(results => {
+//     res.json(results);
+//   });
+// });
 
 app.listen(port, () => {
   console.log("Server is listening on port: ", port);
