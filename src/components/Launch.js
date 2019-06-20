@@ -12,7 +12,7 @@ const Launch = ({ onTextChange, onSearch, city }) => (
       <LocationSearch
         onTextChange={onTextChange}
         onSearch={() => {
-          onSearch("location", { city: city });
+          onSearch("city", { city: city });
         }}
       />
     </div>

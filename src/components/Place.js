@@ -12,10 +12,18 @@ class Place extends Component {
   }
 
   componentDidMount() {
-    Axios.get(
-      `${process.env.REACT_APP_API_URL}/bgphotos/${this.state.city}`
-    ).then(response => {
-      console.log(response.data);
+    // fetchDataFor City
+    Axios.get(`${process.env.REACT_APP_API_URL}/city`, {
+      params: {
+        q: this.state.city
+      }
+    }).then(({ data }) => {
+      this.setState({ bgUrl: data.backgroundImages[0] }, () => {
+        const updatedBg = {};
+        document.getElementById(
+          "location-jumbo"
+        ).style.backgroundImage = `url('${this.state.bgUrl}')`;
+      });
     });
   }
 
@@ -23,7 +31,7 @@ class Place extends Component {
     return (
       <>
         <Navigation />
-        <div className="jumbotron">
+        <div className="jumbotron jumbotron-fluid" id="location-jumbo">
           <div className="container">
             <div className="row">
               <h1 className="display-4">{this.state.city}</h1>

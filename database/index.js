@@ -1,6 +1,5 @@
 require("dotenv").config();
 const mongoose = require("mongoose");
-const { Place, User, City } = require("./models");
 
 mongoose.connect(
   `mongodb+srv://admin:${
@@ -19,9 +18,9 @@ db.once("open", () => {
   console.log(`CONNECTED to ${process.env.DB_NAME} database`);
 });
 
-Place.findById("5d0a6a423707fe6fe13fa9cd").then(result => {
-  // console.log("Finding Place after Importing Modules", result);
-});
+// Place.findById("5d0a6a423707fe6fe13fa9cd").then(result => {
+//   // console.log("Finding Place after Importing Modules", result);
+// });
 
 // Place.updateOne(
 //   { _id: "5d0a6a423707fe6fe13fa9cd" },
