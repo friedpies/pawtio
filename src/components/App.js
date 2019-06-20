@@ -21,7 +21,6 @@ const searchForResults = filters => {
 class App extends Component {
   constructor(props) {
     super(props);
-    // console.log(process.env.REACT_APP_API_URL);
     this.state = {
       didSearch: false,
       filters: [
@@ -83,6 +82,7 @@ class App extends Component {
                 onSearch={this.onSearch}
                 onCheck={this.onCheck}
                 filters={this.state.filters}
+                results={this.state.searchResults}
               />
             )}
           />

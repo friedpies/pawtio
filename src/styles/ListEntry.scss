@@ -1,0 +1,15 @@
+.list-entry-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  border: solid 1px black;
+}
+
+.place-img {
+  width: 100%;
+  max-height: 300px;
+}
+
+.place-details {
+  grid-column-start: 2;
+  grid-column-end: 4;
+}
