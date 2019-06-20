@@ -1,13 +1,15 @@
 import React from "react";
 import { Form, Button } from "react-bootstrap";
+import "../styles/LocationFilter.scss";
 
-const LocationFilter = ({ onSearch, filters, onCheck }) => {
-  // const filterNames = Object.keys(filters);
+const LocationFilter = ({ filters, onCheck }) => {
   return (
     <Form>
       <Form.Group id="place-filters">
         {filters.map((tuple, index) => (
           <Form.Check
+            inline
+            className="filter p-2"
             key={index}
             type="checkbox"
             id={`checkbox-${index}`}
@@ -17,10 +19,6 @@ const LocationFilter = ({ onSearch, filters, onCheck }) => {
           />
         ))}
       </Form.Group>
-
-      <Button variant="primary" onClick={onSearch}>
-        Submit
-      </Button>
     </Form>
   );
 };

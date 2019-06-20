@@ -35,7 +35,6 @@ class App extends Component {
       searchResults: []
     };
 
-    this.onSearch = this.onSearch.bind(this);
     this.onCheck = this.onCheck.bind(this);
   }
 
@@ -44,20 +43,22 @@ class App extends Component {
     const index = parseInt(checkboxId.slice(9, checkboxId.length));
     const updatedCheckboxes = this.state.filters.slice();
     updatedCheckboxes[index] = [updatedCheckboxes[index][0], target.checked];
-    this.setState({
-      filters: updatedCheckboxes
-    });
+    this.setState(
+      {
+        filters: updatedCheckboxes
+      },
+      () => {
+        searchForResults(this.state.filters)
+          .then(({ data }) => {
+            this.setState({ didSearch: true, searchResults: data }); // enables router forwarding
+          })
+          .catch(err => {
+            console.log(err);
+          });
+      }
+    );
   }
 
-  onSearch() {
-    searchForResults(this.state.filters)
-      .then(({ data }) => {
-        this.setState({ didSearch: true, searchResults: data }); // enables router forwarding
-      })
-      .catch(err => {
-        console.log(err);
-      });
-  }
 
   render() {
     return (
@@ -69,7 +70,6 @@ class App extends Component {
             path="/"
             render={() => (
               <Launch
-                onSearch={this.onSearch}
                 onCheck={this.onCheck}
                 filters={this.state.filters}
               />
@@ -79,7 +79,6 @@ class App extends Component {
             path="/results"
             render={() => (
               <Results
-                onSearch={this.onSearch}
                 onCheck={this.onCheck}
                 filters={this.state.filters}
                 results={this.state.searchResults}

@@ -3,11 +3,11 @@ import Navigation from "./Navigation";
 import LocationFilter from "./LocationFilter";
 import ListEntry from "./ListEntry";
 
-const Results = ({ onSearch, onCheck, filters, results }) => (
+const Results = ({ onCheck, filters, results }) => (
   <>
     <Navigation />
     <div className="jumbotron jumbotron-fluid" id="location-jumbo">
-      <LocationFilter onSearch={onSearch} onCheck={onCheck} filters={filters} />
+      <LocationFilter onCheck={onCheck} filters={filters} />
     </div>
     <div className="container">
       <div className="row">

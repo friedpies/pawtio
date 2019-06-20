@@ -1,0 +1,7 @@
+@import './shared.scss';
+
+.filter {
+  background-color: white;
+  border-radius: $component-radius;
+  @include shadow;
+}
