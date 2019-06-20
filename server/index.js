@@ -13,9 +13,13 @@ app.use(express.static(path.join(__dirname, "../build")));
 
 app.get("/api/places", (req, res) => {
   const filterParams = req.query;
-  // query database for places based on results of filter query
-  Place.findById("5d0a6a423707fe6fe13fa9cd").then(results => {
-    res.send(results);
+  const filterObj = {};
+  for (let filter in filterParams) {
+    filterObj[`filters.${filter}`] = filterParams[filter];
+  }
+
+  Place.find(filterObj).then(results => {
+    res.json(results);
   });
 });
 

@@ -1,5 +1,7 @@
 require("dotenv").config();
 const mongoose = require("mongoose");
+const { Place } = require("../database/models");
+const seedData = require("../database/seed_data/seed.json");
 
 mongoose.connect(
   `mongodb+srv://admin:${
@@ -18,98 +20,13 @@ db.once("open", () => {
   console.log(`CONNECTED to ${process.env.DB_NAME} database`);
 });
 
-// Place.updateOne(
-//   { _id: "5d0a6a423707fe6fe13fa9cd" },
-//   {
-//     opening_hours: {
-//       opening_hours: {
-//         open_now: true,
-//         periods: [
-//           {
-//             close: {
-//               day: 0,
-//               time: "2200"
-//             },
-//             open: {
-//               day: 0,
-//               time: "1100"
-//             }
-//           },
-//           {
-//             close: {
-//               day: 1,
-//               time: "2200"
-//             },
-//             open: {
-//               day: 1,
-//               time: "1100"
-//             }
-//           },
-//           {
-//             close: {
-//               day: 2,
-//               time: "2200"
-//             },
-//             open: {
-//               day: 2,
-//               time: "1100"
-//             }
-//           },
-//           {
-//             close: {
-//               day: 3,
-//               time: "2200"
-//             },
-//             open: {
-//               day: 3,
-//               time: "1100"
-//             }
-//           },
-//           {
-//             close: {
-//               day: 4,
-//               time: "2200"
-//             },
-//             open: {
-//               day: 4,
-//               time: "1100"
-//             }
-//           },
-//           {
-//             close: {
-//               day: 5,
-//               time: "2200"
-//             },
-//             open: {
-//               day: 5,
-//               time: "1100"
-//             }
-//           },
-//           {
-//             close: {
-//               day: 6,
-//               time: "2200"
-//             },
-//             open: {
-//               day: 6,
-//               time: "1100"
-//             }
-//           }
-//         ],
-//         weekday_text: [
-//           "Monday: 11:00 AM – 10:00 PM",
-//           "Tuesday: 11:00 AM – 10:00 PM",
-//           "Wednesday: 11:00 AM – 10:00 PM",
-//           "Thursday: 11:00 AM – 10:00 PM",
-//           "Friday: 11:00 AM – 10:00 PM",
-//           "Saturday: 11:00 AM – 10:00 PM",
-//           "Sunday: 11:00 AM – 10:00 PM"
-//         ]
-//       }
-//     }
+// Place.insertMany(seedData, (err, response) => {
+//   if (err) {
+//     console.log("insertion error: ", err);
+//   } else {
+//     Place.update(seedData, {
+//       upsert: false
+//     });
+//     console.log("SEEDED DB");
 //   }
-// ).then(result => {
-//   console.log("Ran insert", result);
 // });
-
-// module.exports = { db };

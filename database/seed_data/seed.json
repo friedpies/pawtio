@@ -1,4 +1,5 @@
-[{
+[
+  {
     "address": {
       "lineOne": "6700 Burnet Rd",
       "lineTwo": "",
@@ -11,13 +12,13 @@
     "phone": "(512) 900-3773",
     "website": "https://yardbar.com/",
     "filters": {
-      "indoors": false,
-      "outdoors": true,
-      "fenced": true,
-      "off-leash allowed": true,
-      "covered patio": false,
-      "food available": true,
-      "drinks": true
+      "indoors": "false",
+      "outdoors": "true",
+      "fenced": "true",
+      "off-leash allowed": "true",
+      "covered patio": "false",
+      "food available": "true",
+      "drinks": "true"
     }
   },
   {
@@ -33,13 +34,13 @@
     "phone": "(512) 481-0694",
     "website": "https://www.cosmiccoffeebeer.com/",
     "filters": {
-      "indoors": true,
-      "outdoors": true,
-      "fenced": true,
-      "off-leash allowed": false,
-      "covered patio": false,
-      "food available": true,
-      "drinks": true
+      "indoors": "true",
+      "outdoors": "true",
+      "fenced": "true",
+      "off-leash allowed": "false",
+      "covered patio": "false",
+      "food available": "true",
+      "drinks": "true"
     }
   },
   {
@@ -55,13 +56,35 @@
     "phone": "(512) 956-7757",
     "website": "https://theinfinitemonkeytheorem.com/",
     "filters": {
-      "indoors": true,
-      "outdoors": false,
-      "fenced": true,
-      "off-leash allowed": false,
-      "covered patio": false,
-      "food available": false,
-      "drinks": true
+      "indoors": "true",
+      "outdoors": "false",
+      "fenced": "true",
+      "off-leash allowed": "false",
+      "covered patio": "false",
+      "food available": "false",
+      "drinks": "true"
+    }
+  },
+  {
+    "address": {
+      "lineOne": "1814 E Martin Luther King Jr Blvd",
+      "lineTwo": "",
+      "city": "Austin",
+      "state": "Texas",
+      "zip": 78702
+    },
+    "images": ["https://infatuation.imgix.net/media/images/reviews/sour-duck-market/banners/1535652663.72.jpg?auto=format&h=840&w=1336"],
+    "name": "Sour Duck Market",
+    "phone": "(512) 394-5776",
+    "website": "https://www.sourduckmarket.com/",
+    "filters": {
+      "indoors": "false",
+      "outdoors": "true",
+      "fenced": "false",
+      "off-leash allowed": "false",
+      "covered patio": "true",
+      "food available": "true",
+      "drinks": "true"
     }
   }
 ]

@@ -7,10 +7,11 @@ import Axios from "axios";
 import "../styles/App.scss";
 
 const searchForResults = filters => {
-  console.log();
   const queryParams = {};
   filters.forEach(filter => {
-    queryParams[filter[0]] = filter[1];
+    if (filter[1]) {
+      queryParams[filter[0]] = filter[1];
+    }
   });
   return Axios.get(`${process.env.REACT_APP_API_URL}/places`, {
     params: queryParams
@@ -52,12 +53,11 @@ class App extends Component {
   onSearch() {
     searchForResults(this.state.filters)
       .then(({ data }) => {
-        console.log("SEARCH RESULTS ", data);
+        this.setState({ didSearch: true, searchResults: data }); // enables router forwarding
       })
       .catch(err => {
         console.log(err);
       });
-    this.setState({ didSearch: true }); // enables router forwarding
   }
 
   render() {
