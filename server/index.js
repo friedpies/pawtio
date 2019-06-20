@@ -4,7 +4,7 @@ const path = require("path");
 const app = express();
 const port = process.env.PORT || 3002;
 const { db } = require("../database");
-const { Place, User, City } = require("../database/models");
+const { Place } = require("../database/models");
 
 const cors = require("cors");
 
