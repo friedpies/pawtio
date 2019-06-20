@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import Navigation from "./Navigation";
 import LocationFilter from "./LocationFilter";
 import ListEntry from "./ListEntry";

@@ -1,5 +1,5 @@
 import React from "react";
-import { Navbar, Nav, FormControl, Form, Button } from "react-bootstrap";
+import { Navbar } from "react-bootstrap";
 
 const Navigation = () => (
   <Navbar bg="primary" variant="dark">
