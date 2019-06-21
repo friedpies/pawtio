@@ -6,9 +6,9 @@ const port = process.env.PORT || 3002;
 const { db } = require("../database");
 const { Place } = require("../database/models");
 
-const cors = require("cors");
+// const cors = require("cors");
 
-app.use(cors());
+// app.use(cors());
 app.use(express.static(path.join(__dirname, "../build")));
 
 // app.get("/api/places", (req, res) => {
