@@ -4,7 +4,7 @@ import LocationFilter from "./LocationFilter";
 import "../styles/Launch.scss";
 
 const Launch = ({ onCheck, filters }) => (
-  <div className="jumbotron">
+  <div className="jumbotron" id="launch-jumbo">
     <Container>
       <h1 className="display-1 mb-5" id="main-header">
         pawtio
