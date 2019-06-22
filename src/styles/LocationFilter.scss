@@ -5,3 +5,9 @@
   border-radius: $component-radius;
   @include shadow;
 }
+
+#place-filters {
+  div {
+    margin-top: 2%;
+  }
+}

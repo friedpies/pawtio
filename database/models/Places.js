@@ -2,6 +2,7 @@ const mongoose = require("mongoose");
 
 let placeSchema = mongoose.Schema({
   name: String,
+  place_id: String,
   address: {
     lineOne: String,
     lineTwo: String,

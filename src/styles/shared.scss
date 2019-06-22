@@ -1,6 +1,5 @@
-
 $component-radius: 8px;
 
 @mixin shadow {
-  filter: drop-shadow(1px 2px grey)
+  filter: drop-shadow(1px 2px 3px grey)
 }
