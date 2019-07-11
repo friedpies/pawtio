@@ -1,0 +1,155 @@
+[{
+    "address": {
+      "lineOne": "6700 Burnet Rd",
+      "lineTwo": "",
+      "city": "Austin",
+      "state": "Texas",
+      "zip": 78757
+    },
+    "images": ["https://static.spacecrafted.com/ff2ef4b0dd0e4d61b1cb4fcc64f6793d/i/e33d908302d545519da0891ffc8097ff/1/GCuCv726gZycFxatRCb7iU/YardBar-176.jpg"],
+    "name": "Yard Bar",
+    "phone": "(512) 900-3773",
+    "website": "https://yardbar.com/",
+    "filters": {
+      "indoors": "false",
+      "outdoors": "true",
+      "fenced": "true",
+      "off-leash allowed": "true",
+      "covered patio": "false",
+      "food available": "true",
+      "drinks": "true"
+    }
+  },
+  {
+    "address": {
+      "lineOne": "121 Pickle Rd",
+      "lineTwo": "",
+      "city": "Austin",
+      "state": "Texas",
+      "zip": 78704
+    },
+    "images": ["https://dailycoffeenews.com/wp-content/uploads/2018/01/cosmic-coffee-beer.jpg"],
+    "name": "Cosmic",
+    "phone": "(512) 481-0694",
+    "website": "https://www.cosmiccoffeebeer.com/",
+    "filters": {
+      "indoors": "true",
+      "outdoors": "true",
+      "fenced": "true",
+      "off-leash allowed": "false",
+      "covered patio": "false",
+      "food available": "true",
+      "drinks": "true"
+    }
+  },
+  {
+    "address": {
+      "lineOne": "702 Shady Ln",
+      "lineTwo": "",
+      "city": "Austin",
+      "state": "Texas",
+      "zip": 78702
+    },
+    "images": ["https://static1.squarespace.com/static/54b80a43e4b060f2e9746ed7/t/58e278bd197aea8ba609ee1c/1491237054395/17635573_278827699210177_3984567696746113056_o.jpg?format=1500w"],
+    "name": "The Infinite Monkey Theorem",
+    "phone": "(512) 956-7757",
+    "website": "https://theinfinitemonkeytheorem.com/",
+    "filters": {
+      "indoors": "true",
+      "outdoors": "false",
+      "fenced": "true",
+      "off-leash allowed": "false",
+      "covered patio": "false",
+      "food available": "false",
+      "drinks": "true"
+    }
+  },
+  {
+    "address": {
+      "lineOne": "1814 E Martin Luther King Jr Blvd",
+      "lineTwo": "",
+      "city": "Austin",
+      "state": "Texas",
+      "zip": 78702
+    },
+    "images": ["https://infatuation.imgix.net/media/images/reviews/sour-duck-market/banners/1535652663.72.jpg?auto=format&h=840&w=1336"],
+    "name": "Sour Duck Market",
+    "phone": "(512) 394-5776",
+    "website": "https://www.sourduckmarket.com/",
+    "filters": {
+      "indoors": "false",
+      "outdoors": "true",
+      "fenced": "false",
+      "off-leash allowed": "false",
+      "covered patio": "true",
+      "food available": "true",
+      "drinks": "true"
+    }
+  },
+  {
+    "address": {
+      "lineOne": "6014 Techni Center Dr",
+      "lineTwo": "Ste 2-101",
+      "city": "Austin",
+      "state": "Texas",
+      "zip": 78721
+    },
+    "images": ["https://static1.squarespace.com/static/533a1e9de4b0bea8053bdc89/5955be04b6ac5085f488cd54/5a0fae6fc8302511610fc8fb/1510977137400/23632842_360801581013063_7500284639923018987_o.jpg?format=2500w"],
+    "name": "Southern Heights Brewing Company",
+    "phone": "(512) 358-4350",
+    "website": "http://www.southernheightsbrewing.com/",
+    "filters": {
+      "indoors": "true",
+      "outdoors": "false",
+      "fenced": "false",
+      "off-leash allowed": "false",
+      "covered patio": "false",
+      "food available": "true",
+      "drinks": "true"
+    }
+  },
+  {
+    "address": {
+      "lineOne": "601 W 6th St",
+      "lineTwo": "",
+      "city": "Austin",
+      "state": "Texas",
+      "zip": 78701
+    },
+    "images": ["http://parloryard.com/wp-content/uploads/2013/01/PANA4574.jpg"],
+    "name": "Parlor and Yard",
+    "phone": "(512) 524-0466",
+    "website": "http://parloryard.com/",
+    "filters": {
+      "indoors": "true",
+      "outdoors": "true",
+      "fenced": "true",
+      "off-leash allowed": "false",
+      "covered patio": "true",
+      "food available": "true",
+      "drinks": "true"
+    }
+  },
+  {
+    "address": {
+      "lineOne": "2307 Manor Rd",
+      "lineTwo": "",
+      "city": "Austin",
+      "state": "Texas",
+      "zip": 78722
+    },
+    "images": ["https://www.totalhappyhour.com/preview/500-450/content/files/mod.happyhour/aef60d80a7764dc4a1dabd440ded9db5.jpg"],
+    "name": "The Butterfly Bar",
+    "phone": "(512) 478-5282",
+    "website": "butterflybaraustin.com",
+    "filters": {
+      "indoors": "false",
+      "outdoors": "true",
+      "fenced": "true",
+      "off-leash allowed": "false",
+      "covered patio": "true",
+      "food available": "true",
+      "drinks": "true"
+    }
+  }
+]
