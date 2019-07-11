@@ -2,8 +2,10 @@
   display: grid;
   grid-template-rows: repeat(3, 1fr);
   height: 100vh;
-  div {
-    border: solid black 1px;
+
+
+  #title-container {
+    margin:auto;
   }
   #main-header {
     filter: drop-shadow(2px 2px 2px grey);

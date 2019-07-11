@@ -2,7 +2,9 @@
 
 .filter {
   background-color: white;
+  opacity: .9;
   border-radius: $component-radius;
+  border: none;
   @include shadow;
 }
 
