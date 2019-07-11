@@ -1,32 +1,16 @@
 #launch-container {
-  #video-overlay {
-    background-color: rgba(255, 255, 255, .5);
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  height: 100vh;
+  div {
+    border: solid black 1px;
   }
-
-  iframe {
-    position: absolute;
-    overflow: hidden;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    pointer-events: none;
-    transform: scale(1.4);
-    z-index: -99;
-  }
-
   #main-header {
-    filter: drop-shadow(2px 2px 2px grey)
+    filter: drop-shadow(2px 2px 2px grey);
   }
 
   #sub-heading {
     z-index: 99;
-    filter: drop-shadow(2px 2px 2px grey)
+    filter: drop-shadow(2px 2px 2px grey);
   }
-
 }
