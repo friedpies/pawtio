@@ -10,3 +10,5 @@ One huge perk of living in Austin, TX is that almost everything is dog friendly!
 
 ### Tech Stack
 This app was built with React, Express, and MongoDB and is deployed with Docker on a Digital Ocean Droplet.
+
+_update: soon to be connected to www.pawt.io (yes... I actually bought that domain name)_
