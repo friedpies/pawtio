@@ -1,6 +1,8 @@
 ## Pawtio
 [Deployed Link](https://pawtio.herokuapp.com/)
 
+![screencapture](https://github.com/friedpies/pawtio/blob/documentation/documentation/pawtio.gif)
+
 A web-app to help you find a place to hang out and chill with your pup in Austin, TX!
 
 ### Description
